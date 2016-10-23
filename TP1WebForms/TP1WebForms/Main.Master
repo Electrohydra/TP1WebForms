@@ -4,13 +4,58 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Club de Judo Haut-Richelieu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
+    <form id="form1" runat="server" role="form" class="form-horizontal">
+        <!-- Menu qui sera visible dans chaque page-->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Club de Judo Haut-Richelieu</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/Club.aspx">Le Club</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Disciplines <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/ApiNav/SiteMap.aspx">Judo</a></li>
+                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Aiki Ju-Jitsu</a></li>
+                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Kendo</a></li>
+                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Yoga</a></li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/LiaisonNormale.aspx">Études</a></li>
+                        <li><a runat="server" href="~/BaseDonnées.aspx">Mission</a></li>
+                        <li><a runat="server" href="~/LiaisonNormale.aspx">Historique</a></li>
+                        <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Partenaires</a></li>
+                        <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Nous joindre</a></li>
+                    </ul>
+                    <!-- Insérer le control LoginView ici  -->
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container body-content">
+            <h2><%: Page.Title %></h2>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Exercice 3</p>
+            </footer>
+        </div>
     </form>
 </body>
 </html>
