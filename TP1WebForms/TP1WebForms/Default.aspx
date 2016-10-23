@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Club.aspx.cs" Inherits="TP1WebForms.Club" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Main.Master"  CodeBehind="Default.aspx.cs" Inherits="TP1WebForms.Default" %>
 
 <asp:Content ID="mainContent" runat="server" ContentPlaceHolderID="mainContent">
     <div class="jumbotron">

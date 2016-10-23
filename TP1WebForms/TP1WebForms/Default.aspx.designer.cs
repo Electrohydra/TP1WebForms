@@ -10,7 +10,7 @@
 namespace TP1WebForms {
     
     
-    public partial class Club {
+    public partial class Default {
         
         /// <summary>
         /// Label1 control.
