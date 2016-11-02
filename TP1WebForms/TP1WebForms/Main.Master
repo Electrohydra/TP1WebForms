@@ -13,7 +13,6 @@
 </head>
 <body>
     <form id="form1" runat="server" role="form" class="form-horizontal">
-        <!-- Menu qui sera visible dans chaque page-->
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -31,20 +30,16 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Disciplines <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/ApiNav/SiteMap.aspx">Judo</a></li>
-                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Aiki Ju-Jitsu</a></li>
-                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Kendo</a></li>
-                                <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Yoga</a></li>
+                                <li><a runat="server" href="~/Diciplines/Judo.aspx">Judo</a></li>
+                                <li><a runat="server" href="~/Diciplines/AikiJuJitsu.aspx">Aiki Ju-Jitsu</a></li>
+                                <li><a runat="server" href="~/Diciplines/Kendo.aspx">Kendo</a></li>
+                                <li><a runat="server" href="~/Diciplines/Yoga.aspx">Yoga</a></li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/LiaisonNormale.aspx">Études</a></li>
-                        <li><a runat="server" href="~/BaseDonnées.aspx">Mission</a></li>
-                        <li><a runat="server" href="~/LiaisonNormale.aspx">Historique</a></li>
-                        <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Partenaires</a></li>
-                        <li><a runat="server" href="~/ApiNav/ControlMenu.aspx">Nous joindre</a></li>
+                        <li><a runat="server" href="~/Études.aspx">Études</a></li>
+                        <li><a runat="server" href="~/Inscription.aspx">Inscription</a></li>
+                        <li><a runat="server" href="~/NousJoindre.aspx">Nous joindre</a></li>
                     </ul>
-                    <!-- Insérer le control LoginView ici  -->
-
                 </div>
             </div>
         </div>
