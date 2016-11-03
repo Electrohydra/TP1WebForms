@@ -36,9 +36,9 @@
                                 <li><a runat="server" href="~/Diciplines/Yoga.aspx">Yoga</a></li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/Études.aspx">Études</a></li>
+                        <li><a runat="server" href="~/Etudes.aspx">Études</a></li>
                         <li><a runat="server" href="~/Inscription.aspx">Inscription</a></li>
-                        <li><a runat="server" href="~/NousJoindre.aspx">Nous joindre</a></li>
+                        <li><a runat="server" href="~/ChangerTheme.aspx">Changer le Thème</a></li>
                     </ul>
                 </div>
             </div>

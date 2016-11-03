@@ -28,7 +28,7 @@
                 renseigner, s’amuser et envisager des compétitions de haut niveau.</li>
         </ul>
         
-        <br /><br />
+        <br />
         <h3>Historique</h3>
 
         Le Club de Judo du Haut-Richelieu a été fondé il y a plus de 30 ans sous l’accréditation de la Ville de Saint-Luc. En septembre 1991 
