@@ -79,5 +79,51 @@
         Parmi nos membres, nous comptons plusieurs membres des forces armées ainsi que des forces policières. Ces membres recherchent un club de 
         Judo pour pouvoir progresser et continuer leurs études.
         
+        <br />
+        <h3>Horaire</h3>
+        <h4>Judo</h4>
+
+        6 à 7 ans (U8)
+
+Lundi: 18h00 à 19h00
+Samedi: 8h30 à 9h30
+
+8 à 11 ans (U10 & U12)
+
+Mardi: 18h00 à 19h30
+Jeudi: 18h00 à 19h30
+Samedi: 8h30 à 10h00
+
+12 à 15 ans (U14 & U16)
+
+Mardi: 18h00 à 19h30
+Jeudi: 18h00 à 19h30
+Samedi: 8h30 à 10h30
+
+16 ans et plus (U18, U21 & Sénior)
+
+Mardi: 19h30 à 21h00
+Jeudi: 19h30 à 21h00
+
+
+
+        <h4>Aiki Ju-Jitsu</h4>
+
+        16 ans et plus
+
+Lundi: 19h15 à 21h00
+Mercredi: 19h15 à 21h00
+Samedi: 11h15 à 13h00
+        <h4>Kendo</h4>
+
+        14 ans et plus
+
+Lundi: 18h30 à 20h30
+Mercredi: 18h30 à 20h30
+        <h4>Yoga</h4>
+        16 ans et plus
+
+Mardi: 18h15 à 19h15
+Jeudi: 18h15 à 19h15
     </div>
 </asp:Content>

@@ -96,6 +96,10 @@
   <ItemGroup>
     <Content Include="ChangerTheme.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Diciplines\AikiJuJitsu.aspx" />
+    <Content Include="Diciplines\Judo.aspx" />
+    <Content Include="Diciplines\Kendo.aspx" />
+    <Content Include="Diciplines\Yoga.aspx" />
     <Content Include="Etudes.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -129,6 +133,34 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diciplines\AikiJuJitsu.aspx.cs">
+      <DependentUpon>AikiJuJitsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diciplines\AikiJuJitsu.aspx.designer.cs">
+      <DependentUpon>AikiJuJitsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diciplines\Judo.aspx.cs">
+      <DependentUpon>Judo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diciplines\Judo.aspx.designer.cs">
+      <DependentUpon>Judo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diciplines\Kendo.aspx.cs">
+      <DependentUpon>Kendo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diciplines\Kendo.aspx.designer.cs">
+      <DependentUpon>Kendo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diciplines\Yoga.aspx.cs">
+      <DependentUpon>Yoga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diciplines\Yoga.aspx.designer.cs">
+      <DependentUpon>Yoga.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etudes.aspx.cs">
       <DependentUpon>Etudes.aspx</DependentUpon>
