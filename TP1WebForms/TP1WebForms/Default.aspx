@@ -3,6 +3,7 @@
 <asp:Content ID="mainContent" runat="server" ContentPlaceHolderID="mainContent">
     <div class="jumbotron">
         
+        <div class="image"><img src="Images/Logo-Judo.jpg" alt="Logo Judo Haut-Richelieu" height="200" ></div>
         <h3>Mission</h3>
 
         Le club de Judo du Haut-Richelieu est accrédité par la ville de St-Jean-sur-Richelieu et reconnu par Judo Québec, le seul organisme 
@@ -133,6 +134,12 @@
                 Mardi: 18h15 à 19h15<br />
                 Jeudi: 18h15 à 19h15
             </div>
+            <br /><br />
+            <h4>Activités</h4>
+            <asp:GridView ID="GridViewActivités" runat="server">
+            </asp:GridView>
         </div>
+
+
     </div>
 </asp:Content>

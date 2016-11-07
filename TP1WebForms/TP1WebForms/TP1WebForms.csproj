@@ -101,6 +101,9 @@
     <Content Include="Diciplines\Kendo.aspx" />
     <Content Include="Diciplines\Yoga.aspx" />
     <Content Include="Etudes.aspx" />
+    <Content Include="Images\Logo-Ten-Chi-Kan.jpg" />
+    <Content Include="Images\Logo-Judo.jpg" />
+    <Content Include="Inscription.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -130,7 +133,6 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -169,6 +171,13 @@
     </Compile>
     <Compile Include="Etudes.aspx.designer.cs">
       <DependentUpon>Etudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.aspx.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscription.aspx.designer.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
