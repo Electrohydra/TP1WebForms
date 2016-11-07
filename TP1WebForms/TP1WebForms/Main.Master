@@ -1,11 +1,15 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="TP1WebForms.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Main.master.cs" Inherits="TP1WebForms.Main" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Club de Judo Haut-Richelieu</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">

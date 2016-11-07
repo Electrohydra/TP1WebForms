@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Main.Master"  CodeBehind="Default.aspx.cs" Inherits="TP1WebForms.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.Master"  CodeBehind="Default.aspx.cs" Inherits="TP1WebForms.Default" %>
 
 <asp:Content ID="mainContent" runat="server" ContentPlaceHolderID="mainContent">
     <div class="jumbotron">
@@ -81,49 +81,58 @@
         
         <br />
         <h3>Horaire</h3>
-        <h4>Judo</h4>
-
-        6 à 7 ans (U8)
-
-Lundi: 18h00 à 19h00
-Samedi: 8h30 à 9h30
-
-8 à 11 ans (U10 & U12)
-
-Mardi: 18h00 à 19h30
-Jeudi: 18h00 à 19h30
-Samedi: 8h30 à 10h00
-
-12 à 15 ans (U14 & U16)
-
-Mardi: 18h00 à 19h30
-Jeudi: 18h00 à 19h30
-Samedi: 8h30 à 10h30
-
-16 ans et plus (U18, U21 & Sénior)
-
-Mardi: 19h30 à 21h00
-Jeudi: 19h30 à 21h00
-
-
-
-        <h4>Aiki Ju-Jitsu</h4>
-
-        16 ans et plus
-
-Lundi: 19h15 à 21h00
-Mercredi: 19h15 à 21h00
-Samedi: 11h15 à 13h00
-        <h4>Kendo</h4>
-
-        14 ans et plus
-
-Lundi: 18h30 à 20h30
-Mercredi: 18h30 à 20h30
-        <h4>Yoga</h4>
-        16 ans et plus
-
-Mardi: 18h15 à 19h15
-Jeudi: 18h15 à 19h15
+        
+        <div class="row">
+            <div class="col-sm-6">
+              <h4>Judo</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>6 à 7 ans (U8)</h5>
+                        Lundi: 18h00 à 19h00<br />
+                        Samedi: 8h30 à 9h30
+                    </div>
+                    <div class="col-sm-6">
+                        <h5>8 à 11 ans (U10 & U12)</h5>
+                        Mardi: 18h00 à 19h30<br />
+                        Jeudi: 18h00 à 19h30<br />
+                        Samedi: 8h30 à 10h00<br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>12 à 15 ans (U14 & U16)</h5>
+                        Mardi: 18h00 à 19h30<br />
+                        Jeudi: 18h00 à 19h30<br />
+                        Samedi: 8h30 à 10h30
+                    </div>
+                    <div class="col-sm-6">
+                        <h5>16 ans et plus (U18, U21 & Sénior)</h5>
+                        Mardi: 19h30 à 21h00<br />
+                        Jeudi: 19h30 à 21h00
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+              <h4>Aiki Ju-Jitsu</h4>
+                    <h5>16 ans et plus</h5>
+                    Lundi: 19h15 à 21h00<br />
+                    Mercredi: 19h15 à 21h00<br />
+                    Samedi: 11h15 à 13h00
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Kendo</h4>
+                <h5>14 ans et plus</h5>
+                Lundi: 18h30 à 20h30<br />
+                Mercredi: 18h30 à 20h30
+            </div>
+            <div class="col-sm-6">
+                <h4>Yoga</h4>
+                <h5>16 ans et plus</h5>
+                Mardi: 18h15 à 19h15<br />
+                Jeudi: 18h15 à 19h15
+            </div>
+        </div>
     </div>
 </asp:Content>
