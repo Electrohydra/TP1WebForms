@@ -3,7 +3,7 @@
 <asp:Content ID="mainContent" runat="server" ContentPlaceHolderID="mainContent">
     <div class="jumbotron">
         
-        <div class="image"><img src="Images/Logo-Judo.jpg" alt="Logo Judo Haut-Richelieu" height="200" ></div>
+        <div class="image"><img src="Images/Logo-Judo.jpg" alt="Logo Judo Haut-Richelieu" height="200" /></div>
         <h3>Mission</h3>
 
         Le club de Judo du Haut-Richelieu est accrédité par la ville de St-Jean-sur-Richelieu et reconnu par Judo Québec, le seul organisme 
@@ -139,7 +139,5 @@
             <asp:GridView ID="GridViewActivités" runat="server">
             </asp:GridView>
         </div>
-
-
     </div>
 </asp:Content>
