@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace TP1WebForms
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
