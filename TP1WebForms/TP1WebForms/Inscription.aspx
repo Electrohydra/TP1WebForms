@@ -4,14 +4,19 @@
     <div class="jumbotron">
         <h3>Inscription au site</h3>
         <br />
-        Nom : <asp:TextBox ID="TextBoxNom" runat="server"></asp:TextBox>    Prénom : <asp:TextBox ID="TextBoxPrénom" runat="server"></asp:TextBox><br />
+        Nom : <asp:TextBox ID="TextBoxNom" runat="server"></asp:TextBox> <asp:RequiredFieldValidator ControlToValidate="TextBoxNom" runat="server" 
+                                                                            ID="RFVNom" EnableClientScript="true" ErrorMessage="Nom obligatoire" />
+            Prénom : <asp:TextBox ID="TextBoxPrénom" runat="server"></asp:TextBox><asp:RequiredFieldValidator ControlToValidate="TextBoxPrénom" runat="server" 
+                                                                            ID="RFVPrénom" EnableClientScript="true" ErrorMessage="Prénom obligatoire" /><br />
         Date de naissance : 
         <asp:DropDownList ID="DropDownAnnéeNaissance" runat="server" onchange = "PopulerJours()"></asp:DropDownList>
         <asp:DropDownList ID="DropDownMoisNaissance" runat="server" onchange = "PopulerJours()"></asp:DropDownList>
         <asp:DropDownList ID="DropDownJourNaissance" runat="server"></asp:DropDownList><br />
         <br />
-        Numéro carte assurance maladie : <asp:TextBox ID="TextBoxNumAM" runat="server"></asp:TextBox><br />
-        Numéro de passeport Canada : <asp:TextBox ID="TextBoxNumPC" runat="server"></asp:TextBox><br />
+        Numéro carte assurance maladie : <asp:TextBox ID="TextBoxNumAM" runat="server"></asp:TextBox><asp:RequiredFieldValidator ControlToValidate="TextBoxNumAM" runat="server" 
+                                                                            ID="RFVNumAM" EnableClientScript="true" ErrorMessage="Numéro d'assurance maladie obligatoire" /><br />
+        Numéro de passeport Canada : <asp:TextBox ID="TextBoxNumPC" runat="server"></asp:TextBox><asp:RequiredFieldValidator ControlToValidate="TextBoxNumPC" runat="server" 
+                                                                            ID="RFVNumPC" EnableClientScript="true" ErrorMessage="Numéro de passeport Canada obligatoire" /><br />
         <br />
 
         <asp:Panel runat="server" ID="Téléphones">
@@ -54,7 +59,7 @@
             <asp:ListItem>Mercredi 18h (U12-U10)</asp:ListItem>
         </asp:DropDownList><br />
         <br />
-        <asp:Button ID="Incription" runat="server" Text="Confirmer l'inscription" />
+        <asp:Button ID="Incription" runat="server" Text="Confirmer l'inscription" OnClick="Incription_Click" />
     </div>
 </asp:Content>
 

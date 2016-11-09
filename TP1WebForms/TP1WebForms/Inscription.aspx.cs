@@ -30,8 +30,8 @@ namespace TP1WebForms
                     this.PopulerMois();
                     this.PopulerJours();
                 }
-                numIdTextBoxTel = 2;
-                numIdTextBoxAdd = 2;
+                numIdTextBoxTel = 1;
+                numIdTextBoxAdd = 1;
             }
             else
             {
@@ -263,6 +263,8 @@ namespace TP1WebForms
         
         protected void AjouterNumTel_Click(object sender, EventArgs e)
         {
+            numIdTextBoxTel++;
+
             var newLabel = new Label();
             var newTextbox = new TextBox();
 
@@ -274,12 +276,12 @@ namespace TP1WebForms
             // add the label and textbox to the panel, then add the panel to the form
             Téléphones.Controls.Add(newLabel);
             Téléphones.Controls.Add(newTextbox);
-
-            numIdTextBoxTel++;
         }
 
         protected void AjouterAdd_Click(object sender, EventArgs e)
         {
+            numIdTextBoxAdd++;
+
             var newLabel = new Label();
             var newTextbox = new TextBox();
 
@@ -291,8 +293,72 @@ namespace TP1WebForms
             // add the label and textbox to the panel, then add the panel to the form
             Addresses.Controls.Add(newLabel);
             Addresses.Controls.Add(newTextbox);
+        }
 
-            numIdTextBoxAdd++;
+        int IDMembre = 1;
+        protected void Incription_Click(object sender, EventArgs e)
+        {
+            int numMembre = GénérerNumMembre();
+            string nom = TextBoxNom.Text;
+            string prénom = TextBoxPrénom.Text;
+            DateTime dateNaissance = new DateTime(Int32.Parse(DropDownAnnéeNaissance.SelectedValue.ToString()),
+                Int32.Parse(DropDownMoisNaissance.SelectedValue.ToString()), Int32.Parse(DropDownJourNaissance.SelectedValue.ToString()));
+            int numAssuranceMaladie = Int32.Parse(TextBoxNumAM.Text);
+            int numPasseport = Int32.Parse(TextBoxNumPC.Text);
+            List<string> numTéléphones = CréerListe(numIdTextBoxTel, "TextBoxTéléphone");
+            List<string> addresses = CréerListe(numIdTextBoxAdd, "TextBoxAddresse");
+
+        }
+
+        List<string> CréerListe(int numId, string nomTextBox)
+        {
+            List<string> li = new List<string>();
+
+            for (int i = 0; i <= numId; i++)
+            {
+
+                TextBox t = (TextBox)Page.FindControl(nomTextBox + i.ToString());
+                li.Add(t.Text);
+            }
+
+            return li;
+        }
+
+        int GénérerNumMembre()
+        {
+            return IDMembre++;
         }
     }
+    /*
+    public int NumMembre { get; set; }
+    public string Nom { get; set; }
+    public string Prénom { get; set; }
+    public DateTime DateNaissance { get; set; }
+    public int NumAssuranceMaladie { get; set; }
+    public int NumPasseport { get; set; }
+    public List<string> NumTéléphone { get; set; }
+    public List<string> Addresses { get; set; }
+    public Grade Grade { get; set; }
+    public DateTime DatePassage { get; set; }
+    public Catégorie Catégorie { get; set; }
+    public DateTime DateInscription { get; set; }
+    public string Cours { get; set; }
+
+
+    /*
+    [Key, Display(Name = "Numéro Membre")]
+    [ScaffoldColumn(false)]
+
+    [Required, StringLength(40), Display(Name = "Nom")]
+
+    [Required, StringLength(20), Display(Name = "Prénom")]
+
+    [Required, , Display(Name = "Numéro Membre")]
+    [ScaffoldColumn(false)]
+
+
+    [EnumDataType(typeof(AcademicYear)), Display(Name = "Academic Year")]
+    public AcademicYear Year { get; set; }
+
+    public virtual ICollection<Enrollment> Enrollments { get; set; }*/
 }

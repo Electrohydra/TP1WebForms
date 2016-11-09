@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Diagnostics;
 
 namespace TP1WebForms
-{
+{/*
     [Serializable]
     public class Activité
     {
@@ -28,7 +28,7 @@ namespace TP1WebForms
 
         public static List<Activité> getDetails()
         {
-            Activité p1 = new Activité("John", 21, "24our", "12h", "13h");
+            /*Activité p1 = new Activité("John", 21, "24our", "12h", "13h");
             Activité p2 = new Activité("Smith", 22, "24our", "12h", "13h");
             Activité p3 = new Activité("Cena", 23, "24our", "12h", "13h");
             List<Activité> li = new List<Activité>();
@@ -37,14 +37,14 @@ namespace TP1WebForms
             li.Add(p3);
             return li;
         }
-    }
+    }*/
 
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridViewActivités.DataSource = Activité.getDetails();
-            GridViewActivités.DataBind();
+            //GridViewActivités.DataSource = Activité.getDetails();
+            //GridViewActivités.DataBind();
         }
     }
 }

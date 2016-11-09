@@ -22,6 +22,15 @@ namespace TP1WebForms {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNom;
         
         /// <summary>
+        /// RFVNom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNom;
+        
+        /// <summary>
         /// TextBoxPrénom control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace TP1WebForms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxPrénom;
+        
+        /// <summary>
+        /// RFVPrénom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVPrénom;
         
         /// <summary>
         /// DropDownAnnéeNaissance control.
@@ -67,6 +85,15 @@ namespace TP1WebForms {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNumAM;
         
         /// <summary>
+        /// RFVNumAM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNumAM;
+        
+        /// <summary>
         /// TextBoxNumPC control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace TP1WebForms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxNumPC;
+        
+        /// <summary>
+        /// RFVNumPC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNumPC;
         
         /// <summary>
         /// Téléphones control.
