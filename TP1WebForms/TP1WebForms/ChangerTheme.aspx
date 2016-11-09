@@ -10,7 +10,7 @@
     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="ChangerTheme.aspx?Theme=Professionnel">Professionnel</asp:HyperLink>
     <br />
 
-         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+         <%--<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>--%>
 
     </div>
 </asp:Content>
