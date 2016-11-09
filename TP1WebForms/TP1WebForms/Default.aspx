@@ -3,6 +3,7 @@
 <asp:Content ID="mainContent" runat="server" ContentPlaceHolderID="mainContent">
     <div class="jumbotron">
         
+        <div class="image"><img src="Images/Logo-Judo.jpg" alt="Logo Judo Haut-Richelieu" height="200" /></div>
         <h3>Mission</h3>
 
         Le club de Judo du Haut-Richelieu est accrédité par la ville de St-Jean-sur-Richelieu et reconnu par Judo Québec, le seul organisme 
@@ -133,6 +134,37 @@
                 Mardi: 18h15 à 19h15<br />
                 Jeudi: 18h15 à 19h15
             </div>
+
+            <h4>Activités</h4>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField DataField="NomActivité" HeaderText="Nom de l'activité" SortExpression="NomActivité" />
+                    <asp:BoundField DataField="ÂgeMin" HeaderText="Âge min. requis" SortExpression="ÂgeMin" />
+                    <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                    <asp:BoundField DataField="HeureDébut" HeaderText="Heure début" SortExpression="HeureDébut" />
+                    <asp:BoundField DataField="heureFin" HeaderText="heure fin" SortExpression="heureFin" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1 %>" DeleteCommand="DELETE FROM [Activité] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Activité] ([NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin]) VALUES (@NomActivité, @ÂgeMin, @Date, @HeureDébut, @heureFin)" ProviderName="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1.ProviderName %>" SelectCommand="SELECT [Id], [NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin] FROM [Activité]" UpdateCommand="UPDATE [Activité] SET [NomActivité] = @NomActivité, [ÂgeMin] = @ÂgeMin, [Date] = @Date, [HeureDébut] = @HeureDébut, [heureFin] = @heureFin WHERE [Id] = @Id">
+                <DeleteParameters>
+                    <asp:Parameter Name="Id" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="NomActivité" Type="String" />
+                    <asp:Parameter Name="ÂgeMin" Type="Int32" />
+                    <asp:Parameter Name="Date" Type="String" />
+                    <asp:Parameter Name="HeureDébut" Type="String" />
+                    <asp:Parameter Name="heureFin" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="NomActivité" Type="String" />
+                    <asp:Parameter Name="ÂgeMin" Type="Int32" />
+                    <asp:Parameter Name="Date" Type="String" />
+                    <asp:Parameter Name="HeureDébut" Type="String" />
+                    <asp:Parameter Name="heureFin" Type="String" />
+                    <asp:Parameter Name="Id" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
         </div>
     </div>
 </asp:Content>
