@@ -9,16 +9,18 @@ namespace TP1WebForms
 {
     public partial class Inscription : System.Web.UI.Page
     {
+        // id pour les textbox qui seront généré dinamiquement
         int numIdTextBoxTel;
         int numIdTextBoxAdd;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //si la page n'est pas PostBack...
             if (!IsPostBack)
             {
                 if (this.SelectedDateNaissance == DateTime.MinValue)
                 {
+                    // on popule les dropdown pour la date de naissance
                     this.PopulerAnnée();
                     this.PopulerMois();
                     this.PopulerJours();
@@ -26,6 +28,7 @@ namespace TP1WebForms
 
                 if (this.SelectedDatePassage == DateTime.MinValue)
                 {
+                    // on popule les dropdown pour la date de passage
                     this.PopulerAnnée();
                     this.PopulerMois();
                     this.PopulerJours();
@@ -51,8 +54,10 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int JourNaissance
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 if (Request.Form[DropDownJourNaissance.UniqueID] != null)
@@ -64,6 +69,7 @@ namespace TP1WebForms
                     return int.Parse(DropDownJourNaissance.SelectedItem.Value);
                 }
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerJours();
@@ -72,12 +78,15 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int MoisNaissance
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 return int.Parse(DropDownMoisNaissance.SelectedItem.Value);
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerMois();
@@ -86,12 +95,15 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int AnnéeNaissance
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 return int.Parse(DropDownAnnéeNaissance.SelectedItem.Value);
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerAnnée();
@@ -100,8 +112,10 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int JourPassage
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 if (Request.Form[DropDownJourPassage.UniqueID] != null)
@@ -113,6 +127,7 @@ namespace TP1WebForms
                     return int.Parse(DropDownJourPassage.SelectedItem.Value);
                 }
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerJours();
@@ -121,12 +136,15 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int MoisPassage
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 return int.Parse(DropDownMoisPassage.SelectedItem.Value);
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerMois();
@@ -135,12 +153,15 @@ namespace TP1WebForms
             }
         }
 
+        // pour faire populer et garder en mémoire la date sélectionner
         private int AnnéePassage
         {
+            //on va chercher la valeur dans le dropdown
             get
             {
                 return int.Parse(DropDownAnnéePassage.SelectedItem.Value);
             }
+            //on popule le dropdown avec les bonne valeur
             set
             {
                 this.PopulerAnnée();
@@ -149,6 +170,7 @@ namespace TP1WebForms
             }
         }
 
+        // on va chercher les items sélectionner pour créer une date pour l'entrer dans la base de donner plus tard
         public DateTime SelectedDateNaissance
         {
             get
@@ -173,6 +195,7 @@ namespace TP1WebForms
             }
         }
 
+        // on va chercher les items sélectionner pour créer une date pour l'entrer dans la base de donner plus tard
         public DateTime SelectedDatePassage
         {
             get
@@ -197,16 +220,23 @@ namespace TP1WebForms
             }
         }
 
+        // Pour faire afficher dans le dropdown le bon nombre de jour dans le mois sélectionner
+        // on faire les dropdown de naissance et et passage en même temps
         private void PopulerJours()
         {
             DropDownJourNaissance.Items.Clear();
             DropDownJourPassage.Items.Clear();
+
             ListItem lt = new ListItem();
             lt.Text = "Jour";
             lt.Value = "0";
+
             DropDownJourNaissance.Items.Add(lt);
             DropDownJourPassage.Items.Add(lt);
+            //On regarde combien il y a de jour dans le mois sélectionner
             int days = DateTime.DaysInMonth(this.AnnéeNaissance, this.MoisNaissance);
+
+            // on ajouter les nombre dans le dropdown pour avoir le bon nombre de jour dans le mois
             for (int i = 1; i <= days; i++)
             {
                 lt = new ListItem();
@@ -215,19 +245,26 @@ namespace TP1WebForms
                 DropDownJourNaissance.Items.Add(lt);
                 DropDownJourPassage.Items.Add(lt);
             }
+
             DropDownJourNaissance.Items.FindByValue(DateTime.Now.Day.ToString()).Selected = true;
             DropDownJourPassage.Items.FindByValue(DateTime.Now.Day.ToString()).Selected = true;
         }
 
+        // Pour faire afficher les mois de l'année
+        // on faire les dropdown de naissance et et passage en même temps
         private void PopulerMois()
         {
             DropDownMoisNaissance.Items.Clear();
             DropDownMoisPassage.Items.Clear();
+
             ListItem lt = new ListItem();
             lt.Text = "Mois";
             lt.Value = "0";
+
             DropDownMoisNaissance.Items.Add(lt);
             DropDownMoisPassage.Items.Add(lt);
+
+            // on ajoute les mois dans le dropdown
             for (int i = 1; i <= 12; i++)
             {
                 lt = new ListItem();
@@ -236,20 +273,27 @@ namespace TP1WebForms
                 DropDownMoisNaissance.Items.Add(lt);
                 DropDownMoisPassage.Items.Add(lt);
             }
+
             DropDownMoisNaissance.Items.FindByValue(DateTime.Now.Month.ToString()).Selected = true;
             DropDownMoisPassage.Items.FindByValue(DateTime.Now.Month.ToString()).Selected = true;
         }
 
+        // Pour faire afficher les années
+        // on faire les dropdown de naissance et et passage en même temps
         private void PopulerAnnée()
         {
             DropDownAnnéeNaissance.Items.Clear();
             DropDownAnnéePassage.Items.Clear();
+
             ListItem lt = new ListItem();
             lt.Text = "Année";
             lt.Value = "0";
+
             DropDownAnnéeNaissance.Items.Add(lt);
             DropDownAnnéePassage.Items.Add(lt);
-            for (int i = DateTime.Now.Year; i >= 1950; i--)
+
+            // on ajoute les années dans le dropdown, on recule j'usqu'en 1900
+            for (int i = DateTime.Now.Year; i >= 1900; i--)
             {
                 lt = new ListItem();
                 lt.Text = i.ToString();
@@ -257,85 +301,100 @@ namespace TP1WebForms
                 DropDownAnnéeNaissance.Items.Add(lt);
                 DropDownAnnéePassage.Items.Add(lt);
             }
+
             DropDownAnnéeNaissance.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
             DropDownAnnéePassage.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
         }
 
+        // pour ajouter un nouveau textBox si besoin pour ajouter un autre numéro de téléphone
         protected void AjouterNumTel_Click(object sender, EventArgs e)
         {
+            // on monte le nombre total de textBox dans la page
             numIdTextBoxTel++;
 
             var newLabel = new Label();
             var newTextbox = new TextBox();
 
-            // textbox needs a unique id to maintain state information
+            // textbox a besoin d'un id unique pour garder l'information information
             newTextbox.ID = "TextBoxTéléphone" + numIdTextBoxTel;
 
             newLabel.Text = "Numéro de téléphone " + numIdTextBoxTel;
 
-            // add the label and textbox to the panel, then add the panel to the form
+            // ajoute le label et textBox au panel, puis ajoute le panel à la form
             Téléphones.Controls.Add(newLabel);
             Téléphones.Controls.Add(newTextbox);
         }
 
+        // pour ajouter un nouveau textBox si besoin pour ajouter une autre addresse
         protected void AjouterAdd_Click(object sender, EventArgs e)
         {
+            // on monte le nombre total de textBox dans la page
             numIdTextBoxAdd++;
 
             var newLabel = new Label();
             var newTextbox = new TextBox();
 
-            // textbox needs a unique id to maintain state information
+            // textbox a besoin d'un id unique pour garder l'information information
             newTextbox.ID = "TextBoxAddresse" + numIdTextBoxAdd;
 
             newLabel.Text = "Addresse " + numIdTextBoxAdd;
 
-            // add the label and textbox to the panel, then add the panel to the form
+            // ajoute le label et textBox au panel, puis ajoute le panel à la form
             Addresses.Controls.Add(newLabel);
             Addresses.Controls.Add(newTextbox);
         }
 
-
+        // les enum pour les différents grade et catégorie du judo
         public enum Grade { Blanche, Jaune, Orange, Verte, Bleu, Marron, Noire, Rouge };
         public enum Catégorie { U10, U12, U14, U16, U18, U21, Sénior, Vétéran };
 
         int IDMembre = 1;
 
+        // Lorsqu'on click sur le bouton de confirmation, on vérifie les champs puis on ajoute les informations dans la bd
         protected void Incription_Click(object sender, EventArgs e)
         {
             int numMembre = GénérerNumMembre();
             string nom = TextBoxNom.Text;
             string prénom = TextBoxPrénom.Text;
+
             DateTime dateNaissance = new DateTime(Int32.Parse(DropDownAnnéeNaissance.SelectedValue.ToString()),
                 Int32.Parse(DropDownMoisNaissance.SelectedValue.ToString()), Int32.Parse(DropDownJourNaissance.SelectedValue.ToString()));
+
             int numAssuranceMaladie = Int32.Parse(TextBoxNumAM.Text);
             int numPasseport = Int32.Parse(TextBoxNumPC.Text);
-            List<string> numTéléphones = CréerListe(numIdTextBoxTel, "TextBoxTéléphone");
-            List<string> addresses = CréerListe(numIdTextBoxAdd, "TextBoxAddresse");
+
+            string numTéléphones = CréerListe(numIdTextBoxTel, "TextBoxTéléphone");
+            string addresses = CréerListe(numIdTextBoxAdd, "TextBoxAddresse");
+
             Grade grade = (Grade)Enum.Parse(typeof(Grade), DDGrade.Text);
             DateTime datePassage = new DateTime(Int32.Parse(DropDownAnnéePassage.SelectedValue.ToString()),
                 Int32.Parse(DropDownMoisPassage.SelectedValue.ToString()), Int32.Parse(DropDownJourPassage.SelectedValue.ToString()));
+
             Catégorie catégorie = (Catégorie)Enum.Parse(typeof(Catégorie), DropDownListCatégorie.Text);
+
             DateTime dateInscription = DateTime.Today;
             string cours = DropDownListCours.Text;
 
             //ajouter dans la bd
         }
 
-        List<string> CréerListe(int numId, string nomTextBox)
+        // on crée une liste des numéro de téléphone ou des addresses de la personne inscrit
+        string CréerListe(int numId, string nomTextBox)
         {
-            List<string> li = new List<string>();
+            string li = "";
 
             for (int i = 0; i <= numId; i++)
             {
-
+                // on récupère le contenu de tout les textbox généré
                 TextBox t = (TextBox)Page.FindControl(nomTextBox + i.ToString());
-                li.Add(t.Text);
+                // on les mets tous ensemble pour créer une seule string
+                li += "/" + t;
             }
 
             return li;
         }
-
+        
+        // on génère un nouveau ID de membre lorsque l'on crée un nouveau membre
         int GénérerNumMembre()
         {
             return IDMembre++;

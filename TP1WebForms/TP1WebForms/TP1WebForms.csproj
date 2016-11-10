@@ -208,7 +208,6 @@
     <Compile Include="Migrations\201611090207054_initial.Designer.cs">
       <DependentUpon>201611090207054_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivitésModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

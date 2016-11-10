@@ -136,6 +136,9 @@
             </div>
 
             <h4>Activités</h4>
+
+            <!-- GridView pour faire afficher les activité dans la base de données, on ne fait 
+                pas afficher le ID de l'activité puisque c'est de  l'information inutile pour les gens normaux-->
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
                 <Columns>
                     <asp:BoundField DataField="NomActivité" HeaderText="Nom de l'activité" SortExpression="NomActivité" />
@@ -145,7 +148,13 @@
                     <asp:BoundField DataField="heureFin" HeaderText="heure fin" SortExpression="heureFin" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1 %>" DeleteCommand="DELETE FROM [Activité] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Activité] ([NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin]) VALUES (@NomActivité, @ÂgeMin, @Date, @HeureDébut, @heureFin)" ProviderName="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1.ProviderName %>" SelectCommand="SELECT [Id], [NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin] FROM [Activité]" UpdateCommand="UPDATE [Activité] SET [NomActivité] = @NomActivité, [ÂgeMin] = @ÂgeMin, [Date] = @Date, [HeureDébut] = @HeureDébut, [heureFin] = @heureFin WHERE [Id] = @Id">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1 %>" 
+                DeleteCommand="DELETE FROM [Activité] WHERE [Id] = @Id" 
+                InsertCommand="INSERT INTO [Activité] ([NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin]) VALUES (@NomActivité, @ÂgeMin, @Date, @HeureDébut, @heureFin)" 
+                ProviderName="<%$ ConnectionStrings:TP1WebForms.Models.ActivitésModelsConnectionString1.ProviderName %>" 
+                SelectCommand="SELECT [Id], [NomActivité], [ÂgeMin], [Date], [HeureDébut], [heureFin] FROM [Activité]" 
+                UpdateCommand="UPDATE [Activité] SET [NomActivité] = @NomActivité, [ÂgeMin] = @ÂgeMin, [Date] = @Date, [HeureDébut] = @HeureDébut, [heureFin] = @heureFin WHERE [Id] = @Id">
                 <DeleteParameters>
                     <asp:Parameter Name="Id" Type="Int32" />
                 </DeleteParameters>

@@ -19,21 +19,10 @@ namespace TP1WebForms
             // Enregistrer le thème
             if (!String.IsNullOrEmpty(Request["Theme"]))
             {
-                // Conserver le thème dans le ViewState
-                //ViewState["SelectedTheme"] = Server.HtmlEncode(Request["Theme"]);
-
-                // Conserver le thème en Session
-                //Session["SelectedTheme"] = Server.HtmlEncode(Request["Theme"]);
-
                 // Conserver le thème dans l'Application
                 Application["SelectedTheme"] = Server.HtmlEncode(Request["Theme"]);
-
-                //TODO: Conserver le thème dans le profil
-                //HttpContext.Current.Profile.SetPropertyValue("SelectedTheme", Server.HtmlEncode(Request["Theme"]));
-                //Profile.Personalization.SelectedTheme = Server.HtmlEncode(Request["Theme"]);
             }
-
-
+            
             // Appeller BasePage PreInit pour appliquer le thème
             base.OnPreInit(e);
         }
