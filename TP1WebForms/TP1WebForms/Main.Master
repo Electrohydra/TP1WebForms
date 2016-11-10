@@ -54,7 +54,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Exercice 3</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Exercice 3 - Michel Remillard & Ariane Leboeuf</p>
             </footer>
         </div>
 

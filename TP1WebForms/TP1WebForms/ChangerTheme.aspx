@@ -5,12 +5,13 @@
         
         
         Changer de thème:<br />
-    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ChangerTheme.aspx?Theme=Couleur">Coloré</asp:HyperLink>
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ChangerTheme.aspx?Theme=Excentrique">Coloré</asp:HyperLink>
     <br />
     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="ChangerTheme.aspx?Theme=Professionnel">Professionnel</asp:HyperLink>
     <br />
+    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="ChangerTheme.aspx?Theme=Aucun">Aucun</asp:HyperLink>
 
-         <%--<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>--%>
-
+<%--  --%>
     </div>
 </asp:Content>
+<%--  --%>

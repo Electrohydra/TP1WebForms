@@ -72,6 +72,7 @@
         </asp:DropDownList><br />
         <br />
         <asp:Button ID="Incription" runat="server" Text="Confirmer l'inscription" OnClick="Incription_Click" />
+
     </div>
 </asp:Content>
 

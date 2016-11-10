@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -7,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace TP1WebForms
 {
-    public partial class Inscription : System.Web.UI.Page
+    public partial class Inscription : BasePage
     {
         // id pour les textbox qui seront généré dinamiquement
         int numIdTextBoxTel;
@@ -376,7 +378,37 @@ namespace TP1WebForms
             string cours = DropDownListCours.Text;
 
             //ajouter dans la bd
-        }
+
+            SqlConnection cnn = new SqlConnection();
+            cnn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["sqlconnection "].ConnectionString;
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from  TableName";
+            cmd.Connection = cnn;
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            da.Fill(ds, " TableName ");
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataRow drow = ds.Tables["TableName"].NewRow();
+            drow["numMembre"] = numMembre;
+            drow["nom"] = nom;
+            drow["prénom"] = prénom;
+            drow["dateNaissance"] = dateNaissance;
+            drow["noAssuranceMaladie"] = numAssuranceMaladie;
+            drow["noPasseport"] = numPasseport;
+            drow["noTelephone"] = numTéléphones;
+            drow["grade"] = grade;
+            drow["datePassage"] = datePassage;
+            drow["catégorie"] = catégorie;
+            drow["dateInscription"] = dateInscription;
+            drow["cours"] = cours;
+
+            ds.Tables["Inscriptions "].Rows.Add(drow);
+            da.Update(ds, " Inscriptions ");
+
+
+    }
 
         // on crée une liste des numéro de téléphone ou des addresses de la personne inscrit
         string CréerListe(int numId, string nomTextBox)

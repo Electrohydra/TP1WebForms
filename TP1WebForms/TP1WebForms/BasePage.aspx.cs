@@ -9,8 +9,6 @@ namespace TP1WebForms
 {
     public partial class BasePage : System.Web.UI.Page
     {
-        static string selectedTheme;
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
