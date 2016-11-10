@@ -3,15 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using TP1WebForms.Models;
-using System.Web.ModelBinding;
-using System.Web.UI.WebControls;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
 namespace TP1WebForms.BLL
 {
-    public class Activités //: IDisposable
+    public class Inscriptions//: IDisposable
     {
         /*SchoolContext db = new SchoolContext();
 
@@ -97,5 +91,6 @@ namespace TP1WebForms.BLL
             Dispose(true);
             GC.SuppressFinalize(this);
         }*/
+    
     }
 }

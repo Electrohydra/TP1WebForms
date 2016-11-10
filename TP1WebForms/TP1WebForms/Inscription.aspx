@@ -26,7 +26,7 @@
             Adresses 1 : <asp:TextBox ID="TextBoxAddresse1" runat="server"></asp:TextBox><asp:Button ID="AjouterAdd" runat="server" Text="Ajouter une addresse" OnClick="AjouterAdd_Click"/><br />
         </asp:Panel>
         <br />
-        Grade : <asp:DropDownList ID="Grade" runat="server">
+        Grade : <asp:DropDownList ID="DDGrade" runat="server">
             <asp:ListItem>Blanche</asp:ListItem>
             <asp:ListItem>Jaune</asp:ListItem>
             <asp:ListItem>Orange</asp:ListItem>
@@ -53,7 +53,7 @@
             <asp:ListItem>Vétéran</asp:ListItem>
         </asp:DropDownList><br />
         Cours : 
-        <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:DropDownList ID="DropDownListCours" runat="server">
             <asp:ListItem>Lundi-Merc-Jeudi 19h30-21h (u16 et plus)</asp:ListItem>
             <asp:ListItem>Lundi-jeudi 18h-19h (U14-U12)</asp:ListItem>
             <asp:ListItem>Mercredi 18h (U12-U10)</asp:ListItem>

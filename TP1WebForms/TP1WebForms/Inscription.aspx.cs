@@ -260,7 +260,7 @@ namespace TP1WebForms
             DropDownAnnéeNaissance.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
             DropDownAnnéePassage.Items.FindByValue(DateTime.Now.Year.ToString()).Selected = true;
         }
-        
+
         protected void AjouterNumTel_Click(object sender, EventArgs e)
         {
             numIdTextBoxTel++;
@@ -295,7 +295,12 @@ namespace TP1WebForms
             Addresses.Controls.Add(newTextbox);
         }
 
+
+        public enum Grade { Blanche, Jaune, Orange, Verte, Bleu, Marron, Noire, Rouge };
+        public enum Catégorie { U10, U12, U14, U16, U18, U21, Sénior, Vétéran };
+
         int IDMembre = 1;
+
         protected void Incription_Click(object sender, EventArgs e)
         {
             int numMembre = GénérerNumMembre();
@@ -307,7 +312,14 @@ namespace TP1WebForms
             int numPasseport = Int32.Parse(TextBoxNumPC.Text);
             List<string> numTéléphones = CréerListe(numIdTextBoxTel, "TextBoxTéléphone");
             List<string> addresses = CréerListe(numIdTextBoxAdd, "TextBoxAddresse");
+            Grade grade = (Grade)Enum.Parse(typeof(Grade), DDGrade.Text);
+            DateTime datePassage = new DateTime(Int32.Parse(DropDownAnnéePassage.SelectedValue.ToString()),
+                Int32.Parse(DropDownMoisPassage.SelectedValue.ToString()), Int32.Parse(DropDownJourPassage.SelectedValue.ToString()));
+            Catégorie catégorie = (Catégorie)Enum.Parse(typeof(Catégorie), DropDownListCatégorie.Text);
+            DateTime dateInscription = DateTime.Today;
+            string cours = DropDownListCours.Text;
 
+            //ajouter dans la bd
         }
 
         List<string> CréerListe(int numId, string nomTextBox)
@@ -329,36 +341,4 @@ namespace TP1WebForms
             return IDMembre++;
         }
     }
-    /*
-    public int NumMembre { get; set; }
-    public string Nom { get; set; }
-    public string Prénom { get; set; }
-    public DateTime DateNaissance { get; set; }
-    public int NumAssuranceMaladie { get; set; }
-    public int NumPasseport { get; set; }
-    public List<string> NumTéléphone { get; set; }
-    public List<string> Addresses { get; set; }
-    public Grade Grade { get; set; }
-    public DateTime DatePassage { get; set; }
-    public Catégorie Catégorie { get; set; }
-    public DateTime DateInscription { get; set; }
-    public string Cours { get; set; }
-
-
-    /*
-    [Key, Display(Name = "Numéro Membre")]
-    [ScaffoldColumn(false)]
-
-    [Required, StringLength(40), Display(Name = "Nom")]
-
-    [Required, StringLength(20), Display(Name = "Prénom")]
-
-    [Required, , Display(Name = "Numéro Membre")]
-    [ScaffoldColumn(false)]
-
-
-    [EnumDataType(typeof(AcademicYear)), Display(Name = "Academic Year")]
-    public AcademicYear Year { get; set; }
-
-    public virtual ICollection<Enrollment> Enrollments { get; set; }*/
 }

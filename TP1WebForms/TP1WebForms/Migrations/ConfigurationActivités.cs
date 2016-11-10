@@ -5,9 +5,9 @@ namespace TP1WebForms.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TP1WebForms.Models.ActivitésModels>
+    internal sealed class ConfigurationActivités : DbMigrationsConfiguration<TP1WebForms.Models.ActivitésModels>
     {
-        public Configuration()
+        public ConfigurationActivités()
         {
             AutomaticMigrationsEnabled = false;
         }
@@ -28,6 +28,24 @@ namespace TP1WebForms.Migrations
             //
 
 
+            /*context.Inscriptions.AddOrUpdate(
+                 new Models.Inscription
+                 {
+                     NumMembre = 1,
+                     Nom = "Leboeuf",
+                     Prénom = "Ariane",
+                     DateNaissance = New DateTime(1993,6,24),
+                     NumAssuranceMaladie = 1234567,
+                     NumPasseport = 234567,
+                     NumTéléphone = "450-524-4613",
+                     Addresses = "2 rue de la pérade",
+                     Grade = Models.Grade.Rouge,
+                     DatePassage = new DateTime(2005,5,25),
+                     Catégorie = Models.Catégorie.U12,
+                     DateInscription = new DateTime(2016,10,31),
+                     Cours = "un jour un moment donné"
+                 }
+*/
             context.Activités.AddOrUpdate(
                  new Models.Activité
                  {
@@ -68,6 +86,7 @@ namespace TP1WebForms.Migrations
                  );
 
             context.SaveChanges();
+
         }
     }
 }

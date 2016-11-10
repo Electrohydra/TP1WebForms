@@ -166,13 +166,13 @@ namespace TP1WebForms {
         protected global::System.Web.UI.WebControls.Button AjouterAdd;
         
         /// <summary>
-        /// Grade control.
+        /// DDGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Grade;
+        protected global::System.Web.UI.WebControls.DropDownList DDGrade;
         
         /// <summary>
         /// DropDownAnnéePassage control.
@@ -211,13 +211,13 @@ namespace TP1WebForms {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCatégorie;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DropDownListCours control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCours;
         
         /// <summary>
         /// Incription control.

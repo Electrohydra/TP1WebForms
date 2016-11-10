@@ -132,7 +132,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Activités.cs" />
+    <Compile Include="BLL\Inscriptions.cs" />
     <Compile Include="ChangerTheme.aspx.cs">
       <DependentUpon>ChangerTheme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,8 +200,9 @@
     <Compile Include="Migrations\201611090207054_initial.Designer.cs">
       <DependentUpon>201611090207054_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\ConfigurationActivités.cs" />
     <Compile Include="Models\ActivitésModels.cs" />
+    <Compile Include="Models\InscriptionsModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
