@@ -102,6 +102,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BasePage.aspx" />
     <Content Include="ChangerTheme.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Diciplines\AikiJuJitsu.aspx" />
@@ -132,7 +133,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Inscriptions.cs" />
+    <Compile Include="BasePage.aspx.cs">
+      <DependentUpon>BasePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage.aspx.designer.cs">
+      <DependentUpon>BasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Activités.cs" />
     <Compile Include="ChangerTheme.aspx.cs">
       <DependentUpon>ChangerTheme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,9 +208,8 @@
     <Compile Include="Migrations\201611090207054_initial.Designer.cs">
       <DependentUpon>201611090207054_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ConfigurationActivités.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivitésModels.cs" />
-    <Compile Include="Models\InscriptionsModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

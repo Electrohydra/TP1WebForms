@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TP1WebForms
 {
-    public partial class ChangerTheme : System.Web.UI.Page
+    public partial class ChangerTheme : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
